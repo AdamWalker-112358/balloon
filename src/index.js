@@ -7,7 +7,9 @@ function inflate(balloon) {
     size = Number(size) + 5;
     
     if (size > 600) {
+        let explosion = new Audio("76H365G-explosion.mp3")
         balloon.textContent = "💥";
+        explosion.play();
     } else {
         balloon.style.fontSize = `${size}px`;
     }

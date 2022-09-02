@@ -4,14 +4,13 @@ const balloon = document.querySelector('p');
 function inflate(balloon) {
     let fontSize = window.getComputedStyle(balloon).fontSize;
     let [size] = fontSize.split('px');
-    size = +size + 5;
+    size = Number(size) + 5;git 
     
     if (size > 600) {
         balloon.textContent = "💥";
     } else {
         balloon.style.fontSize = `${size}px`;
     }
-    
     return size;
 }
 
